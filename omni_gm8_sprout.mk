@@ -29,6 +29,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_PACKAGES += \
     charger_res_images \
     charger
+    
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    bootctrl.msm8937
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.msm8937 \
+    libgptutils \
+    libz \
+    
+# The following modules are included in debuggable builds only.
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl \
+    update_engine_client
+
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_gm8_sprout

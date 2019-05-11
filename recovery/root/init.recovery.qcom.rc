@@ -35,7 +35,7 @@ on fs
     chown system system /dev/ion
     start pulldecryptfiles
     install_keyring
-    setprop ro.hardware.bootctrl msm8953
+    setprop ro.hardware.bootctrl msm8937
 	
 	
     # Needed to make qseecomd work in recovery
